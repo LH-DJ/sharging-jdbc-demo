@@ -40,4 +40,16 @@ public class ReadWriteTest {
         List<User> users = userMapper.selectList(null);
         users.forEach(System.out::println);
     }
+
+    /**
+     * 读数据测试
+     */
+    @Test
+    public void testSelectAll(){
+        List<User> users = userMapper.selectList(null);
+        users.forEach(System.out::println);
+
+        List<User> users2 = userMapper.selectList(null);
+        users2.forEach(System.out::println);
+    }
 }
