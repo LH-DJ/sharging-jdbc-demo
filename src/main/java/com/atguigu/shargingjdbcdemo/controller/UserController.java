@@ -21,7 +21,6 @@ public class UserController {
      */
     @GetMapping("selectAll")
     public void selectAll(){
-
         List<User> users = userMapper.selectList(null);
 
     }
