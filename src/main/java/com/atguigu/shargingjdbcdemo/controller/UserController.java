@@ -16,11 +16,17 @@ public class UserController {
     @Autowired
     private UserMapper userMapper;
 
+<<<<<<< Updated upstream
     /**
      * 测试负载均衡算法(轮询，权重，随机)
      */
     @GetMapping("selectAll")
     public void selectAll(){
+=======
+    @GetMapping("selectAll")
+    public void selectAll(){
+
+>>>>>>> Stashed changes
         List<User> users = userMapper.selectList(null);
 
     }
