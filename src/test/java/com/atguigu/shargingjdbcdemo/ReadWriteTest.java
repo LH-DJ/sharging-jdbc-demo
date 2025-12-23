@@ -21,9 +21,15 @@ public class ReadWriteTest {
     @Test
     public void test() {
         User user = new User();
-        user.setUname("张三丰");
+        user.setUname("张三丰112");
         userMapper.insert(user);
         System.out.println("插入数据完成");
+    }
+
+    @Test
+    public void selectAll(){
+        List<User> users = userMapper.selectList(null);
+        users.forEach(System.out::println);
     }
 
     /**
@@ -32,11 +38,9 @@ public class ReadWriteTest {
     @Transactional//开启事务
     @Test
     public void testTrans(){
-
         User user = new User();
         user.setUname("铁锤");
         userMapper.insert(user);
-
         List<User> users = userMapper.selectList(null);
         users.forEach(System.out::println);
     }
